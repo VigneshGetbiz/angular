@@ -1,0 +1,62 @@
+<div
+  class="container"
+  fxLayout.lg="row"
+  fxLayout.md="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+>
+  <div
+    class="left-side"
+    fxLayoutAlign.lg="center center"
+    fxLayoutAlign.sm="center center"
+    fxLayoutAlign.md="center center"
+    fxLayoutAlign.xs="center center"
+    fxFlex.lg="50%"
+    fxFlex.md="50%"
+    fxFlex.sm="100%"
+    fxFlex.xs="100%"
+  >
+    <pre>
+            <h3>
+            Login Restricted to
+            <a href="#">GETSTEPs:</a>
+            (EMPLOYEES/DEVELOPERS/
+            SERVICE PROVIDERS/
+            STAKE HOLDERS) of   
+            <span style="color: blue; font-weight: bold; font-size: larger;">get</span><span style="color: grey; font-weight: bold; font-size: larger;">biz.</span><span style="color: blue; font-weight: bold; font-size: larger;">app</span> 
+            </h3>
+        </pre>
+  </div>
+  <div
+    class="right-side"
+    fxLayoutAlign.lg="center center"
+    fxLayoutAlign.sm="center center"
+    fxLayoutAlign.xs="center center"
+    fxLayoutAlign.md="center center"
+    fxLayout="column"
+    fxFlex.lg="50%"
+    fxFlex.md="50%"
+    fxFlex.sm="100%"
+    fxFlex.xs="100%"
+    fxLayoutGap="10px"
+  >
+    <p>Face Recognition Login</p>
+    <div class="user" fxLayout='column' fxLayoutAlign='center center'>
+        <div class="circle" fxLayout='row wrap' fxLayoutAlign='center center'>
+          <p class="inner-text">Allow access to camara to enable face recognition </p>
+        </div>
+        <div class="triangle"></div>
+    </div>
+    <h3>or</h3>
+    <div class="input">
+      <input matInput placeholder="0987654321" />
+    </div>
+    <div class="input">
+      <input type="password" matInput placeholder="Password" />
+    </div>
+    <button mat-raised-button color="primary">Login</button>
+    <a href="#">If you forget your password, Click here </a>
+    <h3>If you are a new gester, then</h3>
+    <button mat-raised-button color="primary">Register</button>
+  </div>
+</div>

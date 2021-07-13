@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.bg-primary {
+  background: #3366ff;
+}
+#logo {
+  width: 40px;
+  padding: 3px;
+  /* height: 70px; */
+}
+.icon{
+  width: 20px;
+  height: 20px;
+}
+.icon-1{
+  width: 25px;
+  height: 25px;
+}
+p{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: medium;
+}
+.share {
+  width: 20px;
+}
+a .share{
+  padding-top: 20px;
+}
+.user{
+  width: 40px;
+  height: 45px;
+}
+a p{
+  /* background: #000; */
+  padding-top: 20px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: white;
+}

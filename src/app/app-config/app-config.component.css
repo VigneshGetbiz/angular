@@ -1,0 +1,37 @@
+::ng-deep .mat-tab {
+  margin-top: 10px;
+}
+
+.container {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.text-muted {
+  color: gray;
+}
+
+/*  tab manu */
+::ng-deep .mat-tab-label {
+  background-color: #ff4dff;
+  margin: 0 20px;
+  padding: 0 60px;
+  color: white;
+}
+
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  background-color: gray;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: transparent;
+}
+img {
+  width: 50px;
+  box-shadow: -3px 0px 5px 0px #d9dddc, 1px 5px 5px 0px #d9dddc;
+  padding: 10px;
+  margin: 10px;
+}
+.wraper {
+  overflow-x: auto;
+}

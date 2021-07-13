@@ -1,0 +1,30 @@
+<div class="bg-primary" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="left-side" fxLayout="row" fxLayoutGap.lg="10px" fxLayoutGap.md="5px" fxLayoutGap.sm="5px">
+        <img class="icon" [src]="arowLoc" alt="back" fxFlexAlign="center"/>
+        <a routerLink='/login'>
+            <img id="logo" [src]="logoUrl" alt="getbiz"/>
+        </a>
+
+        <p fxFlexAlign="end">{{ url }}</p>
+    </div>
+    <div class="right-side" fxLayout="row" fxLayoutGap.lg="10px" fxLayoutGap.md="5px" fxLayoutGap.sm="5px">
+        <a routerLink='/share'>
+            <img class="share" [src]="shareLoc" alt="share" fxFlexAlign='center'/>
+        </a>
+
+        <a routerLink='/download'>
+            <p fxFlexAlign='center'>Download Web app</p>
+        </a>
+
+        <img class="icon-1" [src]="downloadLoc" alt="download" fxFlexAlign='center'/>
+        <div fxFlexAlign='center'>
+            <mat-form-field style="color: white;">
+                <mat-label style="color:#ffffff; outline: white;" >Select Language</mat-label>
+                <mat-select style="color:#ffffff;">
+                    <mat-option value="english">English</mat-option>
+                    <mat-option value="tamil ">Tamil</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <img class="user" [src]="user" alt="user" fxFlexAlign='end'></div>
+    </div>

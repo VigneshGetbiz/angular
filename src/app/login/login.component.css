@@ -1,0 +1,53 @@
+.user {
+  border: 5px solid silver;
+  width: 200px;
+  height: 200px;
+}
+.circle {
+  width: 180px;
+  height: 190px;
+  border-radius: 100%;
+  background: silver;
+  position: relative;
+  top: 20px;
+}
+.inner-text {
+  font-size: 10px;
+  width: 100px;
+  text-align: center;
+}
+.triangle {
+  /* width: 120px; */
+
+  border-bottom: 50px solid silver;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  font-size: medium;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  background: blue;
+  color: #ffffff;
+  outline: 0px;
+}
+
+@media only screen and (min-width: 960px) {
+  .left-side {
+    border-right: 1px solid silver;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .left-side {
+    border-bottom: 1px solid silver;
+  }
+}
