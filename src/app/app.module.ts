@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -26,6 +27,9 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DynamicContactFormComponent } from './dynamic-contact-form/dynamic-contact-form.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
+
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +60,9 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     MatDividerModule,
     MatTabsModule,
     MatDialogModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
