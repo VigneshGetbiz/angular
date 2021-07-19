@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,9 +43,6 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
     GoogleMapsComponent,
   ],
   imports: [
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A',
-    }),
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
