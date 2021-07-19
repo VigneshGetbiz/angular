@@ -1,0 +1,116 @@
+<div class="" style="margin: 30px">
+  <!-- Form Cotrol -->
+  <!-- <form action="">
+    First Name : <input type="text" name="" id="" [formControl]="fn" required /> <br />
+    Last Name : <input type="text" name="" id="" [formControl]="ln" required /> <br />
+    Age : <input type="text" name="" id="" [formControl]="age" required /> <br />
+    Mobile No : <input type="text" name="" id="" [formControl]="mob" required /> <br />
+    <button type="submit" (click)="setValue()">Press Me</button>
+  </form> -->
+  <!-- ----------------------------- -->
+
+  <!-- FORM GROUP -->
+  <!-- <form action="" [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <p>
+      <label for=""> </label>
+      FIRST NAME :
+      <input type="text" name="" id="" formControlName="fn" />
+    </p>
+    <p>
+      <label for=""> LAST NAME : </label>
+      <input type="text" name="" id="" formControlName="ln" />
+    </p>
+    <p>
+      <label for=""> AGE : </label>
+      <input type="text" name="" id="" formControlName="age" />
+    </p>
+    <p>
+      <label for=""> MOBILE NO : </label>
+      <input type="text" name="" id="" formControlName="mob" />
+    </p>
+    <div formGroupName="address">
+      <p>
+        <label for=""> ADDRESS 1 : </label>
+        <input type="text" name="" id="" formControlName="address1" />
+      </p>
+      <p>
+        <label for=""> ADDRESS 2 : </label>
+        <input type="text" name="" id="" formControlName="address2" />
+      </p>
+      <p>
+        <label for=""> STATE : </label>
+        <input type="text" name="" id="" formControlName="state" />
+      </p>
+      <p>
+        <label for=""> PIN CODE: </label>
+        <input type="text" name="" id="" formControlName="pin" />
+      </p>
+    </div>
+    <button type="submit" [disabled]="!fg.valid" mat-button color="primary">
+      Press Me Hard
+    </button>
+  </form> -->
+  <!-- ----------------------------------------------------------------------------------- -->
+  <!-- Form Bilder -->
+  <!-- <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+    <p>
+      <label for="">First Name</label>
+      <input type="text" name="" id="" formControlName="fn" />
+    </p>
+
+    <p>
+      <label for="">Last Name</label>
+      <input type="text" name="" id="" formControlName="ln" />
+    </p>
+    <p>
+      <label for="">Age</label>
+      <input type="text" name="" id="" formControlName="age" />
+    </p>
+    <p>
+      <label for="">Mobile No</label>
+      <input type="text" name="" id="" formControlName="mob" />
+    </p>
+    <div class="" formGroupName="address">
+      <p>
+        <label for="">Address1</label>
+        <input type="text" name="" id="" formControlName="address1" />
+      </p>
+      <p>
+        <label for="">Address2</label>
+        <input type="text" name="" id="" formControlName="address2" />
+      </p>
+      <p>
+        <label for="">State</label>
+        <input type="text" name="" id="" formControlName="state" />
+      </p>
+      <p>
+        <label for="">PinCode</label>
+        <input type="text" name="" id="" formControlName="pin" />
+      </p>
+    </div>
+
+    <button type="submit" [disabled]="!contactForm.valid">Save</button>
+  </form> -->
+  <!-- ---------------------------------- -->
+  <!-- FormArray -->
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="dynamicForm">
+    <div
+      class=""
+      fxLayout="row"
+      fxLayoutGap="10px"
+      formArrayName="mobile"
+      *ngFor="
+        let addressGroup of dynamicForm.get('mobile').controls;
+        let i = index
+      "
+      [formGroup]="addressGroup"
+    >
+      <div fxFlexAlign="center" class="">Mobile No :</div>
+      <input type="text" name="" id="" formControlName="mobileNo" />
+      <button mat-button class="remove" (click)="remove()">-</button>
+    </div>
+
+    <button mat-button class="add" (click)="add()">+</button>
+  </form>
+</div>

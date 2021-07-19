@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AppConfigComponent } from './app-config/app-config.component';
 import { ContactFormsComponent } from './contact-forms/contact-forms.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { DynamicContactFormComponent } from './dynamic-contact-form/dynamic-contact-form.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +38,15 @@ import { ContactFormsComponent } from './contact-forms/contact-forms.component';
     PageNotFoudComponent,
     AppConfigComponent,
     ContactFormsComponent,
+    DynamicFormComponent,
+    DialogComponent,
+    DynamicContactFormComponent,
+    GoogleMapsComponent,
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A',
+    }),
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
@@ -45,9 +58,10 @@ import { ContactFormsComponent } from './contact-forms/contact-forms.component';
     MatFormFieldModule,
     MatButtonModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

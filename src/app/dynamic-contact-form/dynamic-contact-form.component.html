@@ -1,0 +1,19 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div
+      class="form"
+      fxLayout="row"
+      fxLayoutGap="10px"
+      formArrayName="mobile"
+      *ngFor="let item of getPhonesFormControls(); let i = index"
+    >
+      <div fxFlexAlign="center" class="">Mobile No : {{ i + 1 }}</div>
+      <input type="text" name="" id="" />
+      <button mat-button class="remove" (click)="remove(i)">-</button>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <button mat-button class="add" (click)="add()">+</button>
+      <button mat-button class="save" (click)="sendData()">Save</button>
+    </div>
+  </form>
+</div>
