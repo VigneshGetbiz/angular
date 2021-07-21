@@ -31,6 +31,7 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AgmCoreModule } from '@agm/core';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { GoogleTranslateComponent } from './google-translate/google-translate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import {MatRadioModule} from '@angular/material/radio';
     DynamicContactFormComponent,
     GoogleMapsComponent,
     RadioButtonComponent,
+    GoogleTranslateComponent,
   ],
   imports: [
     BrowserModule,

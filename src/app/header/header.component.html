@@ -7,7 +7,8 @@
 
         <p fxFlexAlign="end">{{ url }}</p>
     </div>
-    <div class="right-side" fxLayout="row" fxLayoutGap.lg="10px" fxLayoutGap.md="5px" fxLayoutGap.sm="5px">
+    <div class="right-side" fxLayout="row"  fxLayoutGap.lg="10px" fxLayoutGap.md="5px" fxLayoutGap.sm="5px">
+        <app-google-translate></app-google-translate>
         <a routerLink='/share'>
             <img class="share" [src]="shareLoc" alt="share" fxFlexAlign='center'/>
         </a>
