@@ -67,6 +67,18 @@ export class GoogleMapsComponent implements OnInit {
   
    
   ngOnInit(): void {
+    if (!navigator.geolocation) {
+      console.log('location is not supported');
+    }
+    navigator.geolocation.getCurrentPosition((position)=>{
+      
+      console.log(
+        ` lat: ${ position.coords.altitude}
+        `
+      );
+      
+    })
+    
   }
 
 }

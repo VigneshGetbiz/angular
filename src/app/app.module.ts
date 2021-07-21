@@ -29,7 +29,8 @@ import { DynamicContactFormComponent } from './dynamic-contact-form/dynamic-cont
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 import { AgmCoreModule } from '@agm/core';
-
+import { RadioButtonComponent } from './radio-button/radio-button.component';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { AgmCoreModule } from '@agm/core';
     DialogComponent,
     DynamicContactFormComponent,
     GoogleMapsComponent,
+    RadioButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { AgmCoreModule } from '@agm/core';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,

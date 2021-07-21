@@ -1,0 +1,60 @@
+<div class="container" fxLayoutAlign="center start"> 
+    <div class="content" fxLayout="column" fxLayoutAlign="center start"> 
+      <div class="top"> 
+        <mat-radio-group aria-label="Select an option" fxLayout="row" fxLayoutAlign="space-around center" [(ngModel)]="radio"> 
+            <mat-radio-button select [value]="1">Name</mat-radio-button> 
+            <mat-radio-button [value]="2">Image</mat-radio-button> 
+        </mat-radio-group> 
+     
+
+      </div> 
+      <div class="divider" style="width: 100%;"> 
+        <mat-divider> 
+        </mat-divider> 
+      </div> 
+      <div class="bottom" fxLayoutAlign="center center"> 
+        <span [ngSwitch]="radio"> 
+          <p style="color: red;" *ngSwitchCase="1"> 
+            {{name}} 
+          </p> 
+          <p *ngSwitchCase="2"> 
+            <img src="http://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png" 
+              alt="" srcset=""> 
+          </p> 
+          <p *ngSwitchDefault> 
+            Choose any one 
+          </p> 
+        </span> 
+      </div> 
+      <!-- <div class="bottom" fxLayoutAlign="center center"> 
+        <div *ngIf="radio==1;Then nameBlock;else img"></div> 
+        <ng-template #nameBlock> 
+          {{name}} 
+        </ng-template> 
+   
+        <ng-template #img> 
+          <img src="https://repository-images.githubusercontent.com/24195339/87018c00-694b-11e9-8b5f-c34826306d36" alt="" 
+            srcset=""> 
+        </ng-template> 
+  </div> --> 
+    </div> 
+  </div> 
+   
+<!--   
+   
+   
+  <input type="radio" name="gen" id="" [value]='1'  [(ngModel)]="radio">name 
+  <input type="radio" name="gen" id="" [value]='2' [(ngModel)]="radio"> img
+   
+  {{radio}} 
+   
+
+  <br>
+  <mat-radio-button [(ngModel)]=" radi" [value]="11">Name</mat-radio-button> 
+  <mat-radio-button [(ngModel)]=" radi" [value]="12">img</mat-radio-button> 
+  {{radi}} 
+
+   
+  <input type="checkbox" name="" id="" se [(ngModel)]="c"> 
+   
+  {{c}} -->
