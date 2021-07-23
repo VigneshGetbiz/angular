@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -17,7 +16,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { DownloadComponent } from './download/download.component';
-import { ShareComponent } from './share/share.component';
 import { PageNotFoudComponent } from './page-not-foud/page-not-foud.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -30,8 +28,8 @@ import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
-import {MatRadioModule} from '@angular/material/radio';
-import { GoogleTranslateComponent } from './google-translate/google-translate.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { ShareFileComponent } from './shareFile/shareFile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +37,6 @@ import { GoogleTranslateComponent } from './google-translate/google-translate.co
     FooterComponent,
     LoginComponent,
     DownloadComponent,
-    ShareComponent,
     PageNotFoudComponent,
     AppConfigComponent,
     ContactFormsComponent,
@@ -48,7 +45,7 @@ import { GoogleTranslateComponent } from './google-translate/google-translate.co
     DynamicContactFormComponent,
     GoogleMapsComponent,
     RadioButtonComponent,
-    GoogleTranslateComponent,
+    ShareFileComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,8 +63,8 @@ import { GoogleTranslateComponent } from './google-translate/google-translate.co
     MatTabsModule,
     MatDialogModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A'
-    })
+      apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
