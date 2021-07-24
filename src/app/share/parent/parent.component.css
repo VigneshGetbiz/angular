@@ -1,0 +1,12 @@
+::ng-deep .style {
+  background-color: red;
+  width: 300px;
+}
+
+.buttonStyle button {
+  background-color: tomato;
+}
+
+button {
+  background-color: turquoise;
+}
