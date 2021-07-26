@@ -6,9 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent implements OnInit {
-  @Input()
-  buttonClass = 'buttonStyle';
-  // colorName = 'pink';
+  @Input() type: string = 'button';
+  @Input() btnName: string = 'button';
+
+  colorName = 'dodgerblue';
+  // buttonClass = 'buttonStyle';
   constructor() {}
 
   ngOnInit(): void {}

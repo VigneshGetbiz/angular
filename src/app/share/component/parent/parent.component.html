@@ -1,0 +1,34 @@
+<h1>Reusable components</h1>
+
+<!-- <app-badge >new badge </app-badge> -->
+
+<!-- <app-button [colorName]="color">Button</app-button> -->
+
+<!-- <app-button style="background-color: blue" [buttonClass]="buttonStyle"
+  >ngClass</app-button
+> -->
+<!--
+<button mat-button [ngClass]="buttonStyle">parent test</button>
+
+<app-badge></app-badge> -->
+
+<form (ngSubmit)="(onSubmit)" #form="ngForm" [formGroup]="reg">
+  <div class="content" fxLayout="column">
+    <app-input
+      [appearance]="'outline'"
+      [type]="'text'"
+      [label]="'User Name'"
+      [placeholder]="'Enter your Name'"
+      [icon]="'person'"
+    ></app-input>
+    <!--
+    <app-input
+      [appearance]="'outline'"
+      [type]="'password'"
+      [label]="'Password'"
+      [placeholder]="''"
+      [icon]="'password'"
+    ></app-input> -->
+    <app-button [type]="'submit'" [btnName]="'Submit'"></app-button>
+  </div>
+</form>

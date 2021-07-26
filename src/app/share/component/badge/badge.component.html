@@ -3,6 +3,6 @@
 <!-- <div [ngStyle]="{ 'color': colorName, 'background-color':'green' }">ngStyle</div> -->
 <!-- <div></div> -->
 
-<button mat-button class="style">badge button</button>
-
-
+<span [matBadge]="badge" matBadgeOverlap="false">
+  <ng-content #name></ng-content>
+</span>
