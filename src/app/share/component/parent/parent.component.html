@@ -12,7 +12,7 @@
 
 <app-badge></app-badge> -->
 
-<form (ngSubmit)="(onSubmit)" [formGroup]="form">
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
   <div class="content" fxLayout="column">
     <app-input
       [appearance]="'outline'"
