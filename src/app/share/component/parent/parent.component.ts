@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgModule } from '@angular/core';
 @Component({
   selector: 'app-parent',
@@ -8,15 +8,23 @@ import { NgModule } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class ParentComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
-  value?: string;
-  reg = this.fb.group({
-    name: [''],
-    password: [''],
-  });
-  name: any;
 
-  onSubmit(): any {}
+  form!:FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      password: ['', Validators.required],
+      email: ['', Validators.required],
+    });
+  }
+  onSubmit(): any {
+    console.log(this.form.value);
+    
+  }
+  reset(){
+    this.form.reset;
+  }
 
   // buttonStyle = 'style';
 

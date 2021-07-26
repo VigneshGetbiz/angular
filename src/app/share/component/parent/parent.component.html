@@ -12,7 +12,7 @@
 
 <app-badge></app-badge> -->
 
-<form (ngSubmit)="(onSubmit)" #form="ngForm" [formGroup]="reg">
+<form (ngSubmit)="(onSubmit)" [formGroup]="form">
   <div class="content" fxLayout="column">
     <app-input
       [appearance]="'outline'"
@@ -20,15 +20,42 @@
       [label]="'User Name'"
       [placeholder]="'Enter your Name'"
       [icon]="'person'"
+      formControlName='name'
+      [ErrorMessage]="'Name'"
     ></app-input>
-    <!--
+    
     <app-input
       [appearance]="'outline'"
       [type]="'password'"
       [label]="'Password'"
       [placeholder]="''"
       [icon]="'password'"
-    ></app-input> -->
-    <app-button [type]="'submit'" [btnName]="'Submit'"></app-button>
+      formControlName='password'
+      [ErrorMessage]="'Password'"
+
+    ></app-input>
+
+    <app-input
+    [appearance]="'outline'"
+    [label]="'email'"
+    [placeholder]="'example@xyz.com'"
+    formControlName='email'
+    [icon]="'mail'"
+    [ErrorMessage]="'email'"
+    ></app-input>
+
+    <div fxLayout="row" fxLayoutGap="10px">
+      <app-button [type]="'submit'" [btnName]="'Submit'" ></app-button>
+      <app-button [type]="'reset'"  [btnName]="'Reset'" (click)="reset()"></app-button>
+    </div>
   </div>
 </form>
+
+
+<p>
+  Form is {{form.valid ? 'Valid' : 'Invalid'}}
+</p>
+
+<pre>
+{{form.value | json}}
+</pre>

@@ -1,13 +1,19 @@
+<div [formGroup]="form">
 <mat-form-field class="example-full-width" [appearance]="appearance">
   <mat-label>{{ label }}</mat-label>
   <!-- <mat-icon matPrefix >phone</mat-icon> -->
-  <input [type]="type" matInput [placeholder]="placeholder" />
+  <input [type]="type" matInput [placeholder]="placeholder" formControlName="firstName" />
   <mat-icon matSuffix [ngStyle]="{ display: iconVisibility }">{{
     icon
   }}</mat-icon>
   <mat-hint>{{ hint }}</mat-hint>
 </mat-form-field>
 
+<span *ngIf="name.touched && name.hasError('required')" class="error">
+  {{ErrorMessage}}is required*
+</span>
+
+</div>
 <!-- not working -->
 <!-- <button class="material-icons md-avatar-icon add-rm-icon margin-right">
   <mat-icon ng-click="add=!add">{{ add == true ? "add" : "remove" }}</mat-icon>
