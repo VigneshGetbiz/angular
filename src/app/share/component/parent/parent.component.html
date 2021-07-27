@@ -1,61 +1,15 @@
-<h1>Reusable components</h1>
-
-<!-- <app-badge >new badge </app-badge> -->
-
-<!-- <app-button [colorName]="color">Button</app-button> -->
-
-<!-- <app-button style="background-color: blue" [buttonClass]="buttonStyle"
-  >ngClass</app-button
-> -->
-<!--
-<button mat-button [ngClass]="buttonStyle">parent test</button>
-
-<app-badge></app-badge> -->
+<br>
+<br>
+<br>
 
 <form (ngSubmit)="onSubmit()" [formGroup]="form">
-  <div class="content" fxLayout="column">
-    <app-input
-      [appearance]="'outline'"
-      [type]="'text'"
-      [label]="'User Name'"
-      [placeholder]="'Enter your Name'"
-      [icon]="'person'"
-      formControlName='name'
-      [ErrorMessage]="'Name'"
-    ></app-input>
-    
-    <app-input
-      [appearance]="'outline'"
-      [type]="'password'"
-      [label]="'Password'"
-      [placeholder]="''"
-      [icon]="'password'"
-      formControlName='password'
-      [ErrorMessage]="'Password'"
 
-    ></app-input>
+  <app-input formControlName='firstName'></app-input>
+  <br>
+  <app-input formControlName='lastName'></app-input>
 
-    <app-input
-    [appearance]="'outline'"
-    [label]="'email'"
-    [placeholder]="'example@xyz.com'"
-    formControlName='email'
-    [icon]="'mail'"
-    [ErrorMessage]="'email'"
-    ></app-input>
+  <app-button [type]="'submit'" [disabled]="!form.valid" ></app-button>
 
-    <div fxLayout="row" fxLayoutGap="10px">
-      <app-button [type]="'submit'" [btnName]="'Submit'" ></app-button>
-      <app-button [type]="'reset'"  [btnName]="'Reset'" (click)="reset()"></app-button>
-    </div>
-  </div>
 </form>
 
-
-<p>
-  Form is {{form.valid ? 'Valid' : 'Invalid'}}
-</p>
-
-<pre>
-{{form.value | json}}
-</pre>
+{{form.value|json}}

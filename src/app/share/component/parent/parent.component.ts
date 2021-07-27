@@ -13,9 +13,9 @@ export class ParentComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      name: ['', Validators.required],
-      password: ['', Validators.required],
-      email: ['', Validators.required],
+      firstName: ['',Validators.required],
+      lastName: [''],
+     
     });
   }
   onSubmit(): any {
