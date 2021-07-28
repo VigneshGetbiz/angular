@@ -12,10 +12,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class InputComponent implements ControlValueAccessor{
 
-  value!:string;
-  onChange!:(event:any) =>void;
-  onTouched!:(event:any)=>void;
-  disabled!:boolean;
   @Input() appearance: any = 'fill';
   @Input() label: string = 'label';
   @Input() type: string = 'message';
@@ -23,9 +19,14 @@ export class InputComponent implements ControlValueAccessor{
   @Input() hint?: string;
   @Input() icon: string = 'sentiment_satisfied_alt';
   @Input() iconVisibility: string = 'block';
-  @Input() ErrorMessage!: string;
+  // @Input() ErrorMessage!: string;
+  @Input() required!:string; 
+  // --------------------------------------------
+  value!:string;
+  onChange!:(event:any) =>void;
+  onTouched!:()=>void;
+  disabled!:boolean;
   
-  // -----------------------------------------------
   writeValue(value: any): void {
   this.value=value;
   }
@@ -40,6 +41,6 @@ export class InputComponent implements ControlValueAccessor{
   }
   change( $event:any ) {
     this.onChange($event.target.value);
-    this.onTouched($event.target.value);
+    this.onTouched();
   }
 }

@@ -20,6 +20,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 const materialModule = [
   MatButtonModule,
@@ -43,6 +44,7 @@ const materialModule = [
   MatToolbarModule,
   MatTooltipModule,
   MatTabsModule,
+  MatFormFieldModule,
 ];
 
 @NgModule({

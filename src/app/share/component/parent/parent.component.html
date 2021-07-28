@@ -4,12 +4,24 @@
 
 <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-  <app-input formControlName='firstName'></app-input>
-  <br>
-  <app-input formControlName='lastName'></app-input>
+  <app-input formControlName='name' [appearance]="'legacy'" [label]="'Name'" [required]="'required'"></app-input>
+  <div *ngIf="name?.invalid && name?.touched" class="alert-danger">{{nameErrorMessage}}</div>
 
-  <app-button [type]="'submit'" [disabled]="!form.valid" ></app-button>
+  <!-- <span *ngIf="name?.invalid && name?.touched" class="alert-danger">
+    test
+  </span> -->
+  <br>
+  <app-input formControlName='email' [label]="'email'" [placeholder]="'example@xyz.com'" [appearance]="'legacy'"
+    [icon]="'email'" [required]="'required'" [type]="'email'"></app-input>
+  <div *ngIf="email?.touched && email?.invalid" class="alert-danger">
+    {{emailErrorMessage}}
+  </div>
+  <br>
+  <app-button [type]="'submit'" [disabled]="!form.valid"></app-button>
 
 </form>
 
-{{form.value|json}}
+{{form.get('name')?.touched}}
+{{form.get('email')?.touched}}
+
+<!-- {{form.value|json}} -->

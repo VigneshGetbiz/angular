@@ -13,11 +13,32 @@ export class ParentComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      firstName: ['',Validators.required],
-      lastName: [''],
+      name: ['',Validators.required],
+      email: ['',[Validators.required,Validators.email]],
      
     });
+
   }
+    
+    
+    get nameErrorMessage(){
+       const name=this.form.get('name');
+       return name?.hasError('required')?'Name is required':'';
+    }   
+  
+  get emailErrorMessage(){
+    const email=this.form.get('email');
+    return email?.hasError('required')?'email is required': email?.hasError('email')?'email is not valid' :'';
+  }
+
+  get name(){
+    return this.form.get('name');
+  }
+  get email(){
+    return this.form.get('email');
+  }
+
+
   onSubmit(): any {
     console.log(this.form.value);
     
@@ -25,6 +46,8 @@ export class ParentComponent implements OnInit {
   reset(){
     this.form.reset;
   }
+  
+  // -----------------validation--------------------------
 
   // buttonStyle = 'style';
 
