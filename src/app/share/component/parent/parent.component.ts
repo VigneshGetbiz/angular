@@ -15,11 +15,13 @@ export class ParentComponent implements OnInit {
     this.form = this.fb.group({
       name: ['',Validators.required],
       email: ['',[Validators.required,Validators.email]],
-     
     });
-
+// ------------TextArea----------------
+    this.form = this.fb.group({
+     address:['',[Validators.required,Validators.maxLength(50),Validators.minLength(10)]],
+    });
   }
-    
+
     
     get nameErrorMessage(){
        const name=this.form.get('name');
@@ -47,12 +49,13 @@ export class ParentComponent implements OnInit {
     this.form.reset;
   }
   
-  // -----------------validation--------------------------
+// ------------TextArea----------------
 
-  // buttonStyle = 'style';
+  get addressErrorMessage(){
+    const address=this.form.get("address");
+    return address;
+  }
 
-  // color: string = 'red';
-  // bgColor: string = 'green';
 
   ngOnInit(): void {}
 }

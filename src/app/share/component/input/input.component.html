@@ -6,7 +6,10 @@
   <mat-icon matSuffix [ngStyle]="{ display: iconVisibility }">{{
     icon
   }}</mat-icon>
-  <mat-hint>{{ hint }}</mat-hint>
+  <mat-hint>
+    {{ hint }}
+    <ng-content select='.inputFiledErrorMessage'></ng-content>
+  </mat-hint>
 </mat-form-field>
 <!-- not working -->
 <!-- <button class="material-icons md-avatar-icon add-rm-icon margin-right">
