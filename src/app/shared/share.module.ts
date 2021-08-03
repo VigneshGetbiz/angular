@@ -20,6 +20,7 @@ import { RadioButtonComponent } from './component/radio-button/radio-button.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './module/material.module';
+import { FormDebugComponent } from './component/form-debug/form-debug.component';
 
 const shareComponent = [
   ButtonComponent,
@@ -41,7 +42,7 @@ const shareComponent = [
 ];
 
 @NgModule({
-  declarations: [shareComponent],
+  declarations: [shareComponent, FormDebugComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -49,6 +50,6 @@ const shareComponent = [
     FlexLayoutModule,
     MaterialModule,
   ],
-  exports: [shareComponent],
+  exports: [shareComponent,FormDebugComponent],
 })
 export class ShareModule {}

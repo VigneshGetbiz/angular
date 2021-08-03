@@ -21,9 +21,13 @@ import { AgmCoreModule } from '@agm/core';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { ShareFileComponent } from './shareFile/shareFile.component';
 
-import { ShareModule } from './share/share.module';
-import { MaterialModule } from './share/module/material.module';
-import { CommonModule } from './share/module/common.module';
+import { ShareModule } from './shared/share.module';
+import { MaterialModule } from './shared/module/material.module';
+import { CommonModule } from './shared/module/common.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyMaterialModule } from '@ngx-formly/material';
+import { FormlyComponent } from './ngxFormly/formly/formly.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,7 @@ import { CommonModule } from './share/module/common.module';
     GoogleMapsComponent,
     RadioButtonComponent,
     ShareFileComponent,
+    FormlyComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,9 @@ import { CommonModule } from './share/module/common.module';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDsgCzsOxvUf79nxldljihQSQVmqdt059A',
     }),
+    ReactiveFormsModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
